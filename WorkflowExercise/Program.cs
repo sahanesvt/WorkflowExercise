@@ -10,6 +10,14 @@ namespace WorkflowExercise
     {
         static void Main(string[] args)
         {
+            var workflow = new Workflow();
+            var sleeping = new Sleeping();
+            var walking = new Walking();
+            workflow.AddActivity(sleeping);
+            workflow.AddActivity(walking);
+
+            workflow.Run();
+            Console.ReadLine();
         }
     }
 }
